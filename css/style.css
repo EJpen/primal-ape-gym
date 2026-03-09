@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap');
+
+body,
+html {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #020202;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Oswald', sans-serif;
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Custom Selection */
+::selection {
+  background: #c1f641;
+  color: #000;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020202;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c1f641;
+}
+
+/* Glitch Effect for Title on Hover (Optional) */
+.glitch-hover:hover {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  color: #c1f641;
+}
+
+/* Utility for card hover effects */
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Menu Transitions */
+.mobile-open {
+  overflow: hidden;
+}
+
+#mobile-menu {
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  display: flex;
+}
+
+/* Hero Image Clip Path */
+.clip-hero-image {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 768px) {
+  .clip-hero-image {
+    clip-path: none;
+  }
+}
+
+/* Footer Giant Faded Text */
+.huge-faded-text {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.0) 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
