@@ -228,6 +228,26 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power2.out"
   });
 
+  // Team Members Stagger
+  gsap.fromTo(".team-card",
+    {
+      y: 80,
+      autoAlpha: 0
+    },
+    {
+      scrollTrigger: {
+        trigger: "#team",
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power2.out"
+    }
+  );
+
   // Pricing Cards Stagger
   gsap.fromTo(".pricing-card",
     {
